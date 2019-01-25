@@ -1,5 +1,5 @@
 {% set name = "mrcfile" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 689bb3a094500d0025abb0bcb24b75558dde3f68fe659c8d610b15aa6180dbc9
+  sha256: 52ee39d54bc163f8b6a20538f52b12b6a5b06871b2bae33217e9ea68a7166651
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
   host:
-    - numpy >=1.11.0,<1.16.0
+    - numpy >=1.11.0
     - pip
     - python
   run:
-    - numpy >=1.11.0,<1.16.0
+    - numpy >=1.11.0
     - python
 
 test:
