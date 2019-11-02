@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About mrcfile
 =============
 
@@ -32,9 +28,15 @@ I/O functions.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/mrcfile-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/mrcfile-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/mrcfile-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/mrcfile-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/mrcfile-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/mrcfile-feedstock/branch/master)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6112&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mrcfile-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
