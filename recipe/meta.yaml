@@ -11,12 +11,14 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  number: 2
+  entry_points:
+    - mrcfile-header = mrcfile.command_line:print_headers
+    - mrcfile-validate = mrcfile.validator:main
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - numpy >=1.11.0
     - pip
     - python
   run:
@@ -26,10 +28,15 @@ requirements:
 test:
   imports:
     - mrcfile
+  commands:
+    - pip check
+    - mrcfile-header
+  requires:
+    - pip
 
 about:
   home: https://github.com/ccpem/mrcfile
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: MRC file I/O library
@@ -55,3 +62,4 @@ extra:
   recipe-maintainers:
     - colinpalmer
     - bkpoon
+    - anthchirp
