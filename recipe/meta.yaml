@@ -1,17 +1,17 @@
 {% set name = "mrcfile" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aa79ca38dae99d8f9ee44bd9dcdd5d50d6c95fabef4aedc7036bf9f2d7d64890
+  sha256: 9afaa76f52e84b127abefdbf819ac195b8898e802f9a2be37b10305b4c521f9c
 
 build:
   noarch: python
-  number: 2
+  number: 0
   entry_points:
     - mrcfile-header = mrcfile.command_line:print_headers
     - mrcfile-validate = mrcfile.validator:main
@@ -22,7 +22,7 @@ requirements:
     - pip
     - python
   run:
-    - numpy >=1.11.0
+    - numpy >=1.12.0
     - python
 
 test:
