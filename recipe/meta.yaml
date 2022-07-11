@@ -1,5 +1,5 @@
 {% set name = "mrcfile" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a113042d24820b9dfc6902cb9d93bcbebdee22beb40552f2c35303ace4b0547
+  sha256: bcee328ea82e8a51f8b549ecac3d343af71ad40e87ed1d0e7c539a3b48458821
 
 build:
   noarch: python
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - numpy >=1.12.0
-    - python
+    - numpy >=1.16
+    - python >=3.6
 
 test:
   imports:
