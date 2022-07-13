@@ -1,5 +1,5 @@
 {% set name = "mrcfile" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bcee328ea82e8a51f8b549ecac3d343af71ad40e87ed1d0e7c539a3b48458821
+  sha256: 6ce300a4a56fc421ccc28d36c822a284b7bb5a78e2b3eaa6b8c49eba96868c3d
 
 build:
   noarch: python
