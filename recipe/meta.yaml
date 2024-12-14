@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3f304c02cb9f0900b26683679c5d3d750da64b5c370b58d69af8a8ddf720c0ce
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - mrcfile-header = mrcfile.command_line:print_headers
     - mrcfile-validate = mrcfile.validator:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy >=1.16
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
     - mrcfile-header
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ccpem/mrcfile
